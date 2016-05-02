@@ -14,11 +14,40 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 72px;
+  font-weight: bold;
+}
+
+.navbar {
+  position: fixed;
+  opacity: 0;
+  max-width: 200px;
+  margin-right: 0;
+  margin-left: 0;
+  height: 220px;
+  margin-top: calc(50vh - 110px);
+}
+
+.navbar-nav,
+.navbar-nav > li,
+.navbar-left,
+.navbar-right,
+.navbar-header
+{float:none !important;}
+
+.navbar-right .dropdown-menu {left:0;right:auto;}
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
+
+.navbar-default {
+  border: none;
+  background: white;
 }
 
 .quote {
   font-family: "baskerville-urw",sans-serif;
   font-style: italic;
+  font-size: 18px;
 }
 
 .tn-title {
@@ -26,4 +55,8 @@ h1 {
   margin-left: 23px;
   margin-top: 140px;
   pointer-events: none;
+}
+
+h4.next {
+  margin: 3em 0;
 }
