@@ -36,43 +36,61 @@
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <a href="#" class="thumbnail">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target=".mymodal">
+            <img src="http://placehold.it/400x250">
+          </a>
+          <div class="modal-content hide">
+            <div class="title">Titre du contenu</div>
+            <div class="body">Texte du contenu</div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target=".mymodal">
             <img src="http://placehold.it/400x250">
           </a>
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <a href="#" class="thumbnail">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target=".mymodal">
             <img src="http://placehold.it/400x250">
           </a>
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <a href="#" class="thumbnail">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target=".mymodal">
             <img src="http://placehold.it/400x250">
           </a>
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <a href="#" class="thumbnail">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target=".mymodal">
             <img src="http://placehold.it/400x250">
           </a>
         </div>
 
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/400x250">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <a href="#" class="thumbnail">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target=".mymodal">
             <img src="http://placehold.it/400x250">
           </a>
         </div>
 
       </div>
     </div>
+
+    <div class="modal fade mymodal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Titre</h4>
+          </div>
+          <div class="modal-body">
+            <p>Contenu</p>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -82,5 +100,14 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <script>
+      $('.mymodal').on('show.bs.modal', function (e) {
+        var $modalContent = $(e.relatedTarget).parent().find('.modal-content');
+        var $modal = $(this);
+        $modal.find('.modal-title').html($modalContent.find('.title').html());
+        $modal.find('.modal-body').html($modalContent.find('.body').html());
+      });
+    </script>
   </body>
 </html>
