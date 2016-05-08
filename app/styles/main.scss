@@ -29,6 +29,11 @@ h1 {
   }
 }
 
+.navbar.navbar-default {
+  border: none;
+  background: none;
+}
+
 .navbar {
   position: fixed;
   opacity: 0;
@@ -36,6 +41,8 @@ h1 {
   margin-right: 0;
   margin-left: 0;
   height: 220px;
+  overflow: hidden;
+  border-radius: 0;
   margin-top: calc(50vh - 110px);
 }
 
@@ -45,6 +52,29 @@ h1 {
 .navbar-right,
 .navbar-header
 {float:none !important;}
+
+.navbar-nav > li {
+  transition: all 500ms;
+}
+
+.navbar-nav > li.active {
+  width: 150%;
+  margin-left: -15px;
+  background-image: rgba(178, 69, 146, 0.1);
+  background-image: -webkit-linear-gradient(to left, rgba(178, 69, 146, 0.5) , rgba(241, 95, 121, 1));
+  background-image: linear-gradient(to left, rgba(178, 69, 146, 0.5) , rgba(241, 95, 121, 1));
+
+  a, a:visited, a:active, a:hover {
+    color: white;
+    margin-left: 15px;
+  }
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background: transparent;
+}
 
 .navbar-right .dropdown-menu {left:0;right:auto;}
 .navbar-collapse .navbar-nav.navbar-right:last-child {
