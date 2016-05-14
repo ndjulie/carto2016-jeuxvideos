@@ -11,6 +11,11 @@ html, body {
   background: #DAE2F8; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #DAE2F8 , #D6A4A4); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #DAE2F8 , #D6A4A4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 16px;
+}
+
+p {
+  line-height: 32px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -106,7 +111,9 @@ h1 {
 
 .modal-content {
   border-radius: 0;
-  background: #E7E7E2;
+  background-image: rgba(178, 69, 146, 0.1);
+  background-image: -webkit-linear-gradient(to bottom, rgba(178, 69, 146, 0.5) , rgba(117, 30, 233, 0.3));
+  background-image: linear-gradient(to bottom, rgba(178, 69, 146, 0.5) , rgba(117, 30, 233, 0.3));
   padding-bottom: 1em;
 
   .btn-primary {
@@ -114,16 +121,20 @@ h1 {
   }
 }
 
+.modal-header {
+  border: none;
+}
+
 .btn-primary {
   color: #fff;
-  background-color: rgba(241, 95, 121, 1);
-  border-color: rgba(241, 95, 121, 1);
+  background-color: rgba(117, 30, 233, 1);
+  border-color: rgba(117, 30, 233, 1);
   transition: background-color 500ms;
   border-radius: 0;
 
   &:hover {
-    background-color: rgba(255, 45, 121, 1);
-    border-color: rgba(255, 45, 121, 1);
+    background-color: rgba(200, 30, 233, 1);
+    border-color: rgba(200, 30, 233, 1);
   }
 }
 
@@ -196,4 +207,10 @@ h1 {
 
 h4.next {
   margin: 3em 0;
+}
+
+article {
+  img {
+    margin: 3em 0;
+  }
 }
