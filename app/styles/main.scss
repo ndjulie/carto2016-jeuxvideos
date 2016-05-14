@@ -4,9 +4,13 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+$color-dark-purple: #751EE9;
+
 html, body {
   font-family: "proxima-nova",sans-serif;
-  background-color: #E7E7E2;
+  background: #DAE2F8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #DAE2F8 , #D6A4A4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #DAE2F8 , #D6A4A4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,11 +20,19 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 72px;
   font-weight: bold;
-  color: #E91E8E;
+  color: $color-dark-purple;
 }
 
 .header {
   padding-left: 0;
+
+  h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: $color-dark-purple;
+    text-transform: uppercase;
+    letter-spacing: 72px;
+  }
 
   .quote {
     font-size: 30px;
