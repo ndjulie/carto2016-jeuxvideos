@@ -48,7 +48,20 @@ h1 {
 
 .navbar.navbar-default {
   border: none;
-  background: none;
+  height: 100%;
+  margin-top: 0px;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 12.5px;
+
+  li {
+
+  }
+
+  li:first-child {
+    //margin-top: calc(50vh - 270px / 2);
+  }
 }
 
 .navbar {
@@ -70,8 +83,62 @@ h1 {
 .navbar-header
 {float:none !important;}
 
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  padding-bottom: 5px;
+}
+
+.navbar-collapse.collapse {
+  height: 100vh !important;
+}
+
+.navbar-collapse .navbar-nav.navbar-right {
+  margin-top: calc(100vh - 430px);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+}
+
 .navbar-nav > li {
   transition: all 500ms;
+
+  &.secondary {
+    font-size: 10px;
+
+    a, a:visited, a:active, a:hover {
+      padding-top: 0;
+      padding-bottom: 0;
+      text-transform: none;
+    }
+  }
+
+  a, a:visited, a:active, a:hover {
+    text-transform: uppercase;
+
+    &:after {
+      margin-top: 5px;
+      position: relative;
+      display: block;
+      content: ' ';
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      transition: 1s width;
+    }
+  }
+
+  &.active {
+    a:after, a:visited:after, a:active:after, a:hover:after {
+      width: 50px;
+    }
+  }
+
+  a:hover {
+    &:after {
+      width: 50px;
+    }
+  }
 }
 
 .navbar-nav > li.active {
@@ -207,6 +274,7 @@ h1 {
 
 h4.next {
   margin: 3em 0;
+  text-transform: uppercase;
 }
 
 article {
