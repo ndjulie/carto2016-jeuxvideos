@@ -141,13 +141,13 @@ blockquote {
 
   &.active {
     a:after, a:visited:after, a:active:after, a:hover:after {
-      width: 50px;
+      width: 80px;
     }
   }
 
   a:hover {
     &:after {
-      width: 50px;
+      width: 80px;
     }
   }
 }
@@ -155,12 +155,9 @@ blockquote {
 .navbar-nav > li.active {
   width: 150%;
   margin-left: -15px;
-  background-image: rgba(178, 69, 146, 0.1);
-  background-image: -webkit-linear-gradient(to left, rgba(178, 69, 146, 0.5) , rgba(241, 95, 121, 1));
-  background-image: linear-gradient(to left, rgba(178, 69, 146, 0.5) , rgba(241, 95, 121, 1));
 
   a, a:visited, a:active, a:hover {
-    color: white;
+    color: white !important;
     margin-left: 15px;
   }
 }
@@ -256,7 +253,7 @@ blockquote {
   &.gta { background-image: url(../images/tn-gta.png) }
   &.simcity { background-image: url(../images/tn-simcity.png) }
   &.callofduty { background-image: url(../images/tn-callofduty.png) }
-  &.residentevil4 { background-image: url(../images/tn-residentevil4.png) }
+  &.residentevil { background-image: url(../images/tn-residentevil4.png) }
   &.civilization { background-image: url(../images/tn-civilization.png) }
 
   .tn-title {
@@ -278,7 +275,7 @@ blockquote {
 
   &:hover {
     .tn-title:after {
-      width: 50px;
+      width: 80px;
     }
   }
 }
