@@ -12,6 +12,7 @@ html, body {
   background: -webkit-linear-gradient(to bottom, #DAE2F8 , #D6A4A4); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #DAE2F8 , #D6A4A4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: 16px;
+  position: relative;
 }
 
 p {
@@ -256,10 +257,18 @@ blockquote {
   &.residentevil { background-image: url(../images/tn-residentevil4.png) }
   &.civilization { background-image: url(../images/tn-civilization.png) }
 
+  &.lifeisstrange { background-image: url(../images/tn-lifeisstrange.png) }
+  &.specops { background-image: url(../images/tn-specops.png) }
+  &.jjjoust { background-image: url(../images/tn-jjjoust.png) }
+  &.gta2 { background-image: url(../images/tn-gta2.png) }
+  &.eugenics { background-image: url(../images/tn-eugenics.png) }
+  &.thewitness { background-image: url(../images/tn-thewitness.png) }
+
   .tn-title {
     position: absolute;
-    margin-left: 23px;
-    margin-top: 140px;
+    margin-left: 0;
+    margin-top: 90px;
+    font-size: 30px;
     pointer-events: none;
 
     &:after {
