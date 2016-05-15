@@ -286,7 +286,26 @@ h4.next {
 }
 
 article {
-  img {
+  img:not(.media-object) {
     margin: 3em 0;
   }
+}
+
+.media-left, .media-right, .media-body {
+  vertical-align: middle;
+}
+
+.media {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  p {
+    line-height: 20px;
+  }
+}
+
+.actor {
+  display: inline-block;
+  width: 270px;
+  float: left;
 }
